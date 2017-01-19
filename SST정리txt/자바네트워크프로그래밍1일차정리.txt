@@ -1,0 +1,41 @@
+세 가지 구분하기.
+MultiProcessing
+MultiTasking
+MultiThreading
+
+
+Thread 구현 방법 두 가지
+1. Thread 클래스 상속하는 클래스 만들기.
+2. Runnable interface 구현하는 클래스 만든 후에, Thread 객체에 삽입.
+2번째 방법이 더 좋다! 
+다른 클래스 상속 가능해져서 다른 클래스와의 구속관계가 덜 하다.
+
+JVM 내부의 "Thread Scheduler"
+->자바 스레드의 직접적인 실행 통제를 함
+
+Thread 제어
+
+start() 
+-> Thread Scheduler로 하여금 여유가 될 때 스레드를 실행해달라고 부탁.
+-> non-blocking method.
+
+Daemon Thread -> JVM의 가비지 컬렉터도 Daemon thread의 한 예시.
+
+join() -> 다른 스레드가 실행 종료될 때까지 대기.(blocking method)
+
+interrupt(), isinterrupted() -> 인터럽트 걸어서 안전하게 스레드 종료 위해 로직 사용.
+
+yield() -> 스레드가 running 상태로 돌아감으로써 다른 thread들이 실행될 기회를 주기 위한 함수.
+
+synchronized method -> 메소드 자체에 락을 거는 것.
+-> 동기화하기 편리하지만, 메소드 전체가 락이 걸리므로 메소드 실행 내용 중
+   일부만 락이 필요한 경우라면 비효율적이다. 그럴 땐 Monitor를 사용하는 것이 유리.
+
+synchronized block
+
+Monitor -> 공유 자원에 thread가 접근하는 것을 제어하기 위해 Monitor(객체) 사용.
+공유자원 객체 자체를 모니터로 사용. 그냥 dummy 객체를 만들어서 모니터로 사용할 수도 있음!
+
+이클립스 및 이클립스의 콘솔 출력도 스레드로 짠 거라서, 스레드의 실행순서 테스트 시 
+콘솔 출력 내용이 실제 실행순서와 다를 때도 있음..
+
