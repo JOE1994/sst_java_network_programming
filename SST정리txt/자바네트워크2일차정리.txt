@@ -1,0 +1,29 @@
+Producer & Consumer Pattern.
+
+MVC pattern (Model - View - Controller)
+Model : 데이터 저장. 주로 private으로 설정해 두어 외부에서의 허용되지 않은 접근 방지.
+Controller : 클래스에서 Model에 접근할 수 있는 operation들을 메소드들로 구현한 것.
+View : Main 함수에서 실제 user에게 보여지는 인터페이스. 
+
+business method -> MVC pattern에서 Controller를 구현한 메소드들. Model에 대한 간접접근 메소드.
+
+Singleton pattern. 
+-> 인스턴스가 단 하나만 생기도록 하는 개발 패턴. 
+-> multi-thread 환경에서 사용하는지, 클래스가 로드되는 시점에 인스턴스를 형성되게 할지 말지 따라
+   구현방식이 달라질 수 있다. 
+-> eager initialization, static block initialization, lazy initialization, thread safe initialization,
+   initialization on demand holder idiom, enum initialization 등의 방식들이 있다. 
+   firefox 즐겨찾기 중에 java singleton pattern을 정리한 블로그 추가해 놓았으니 참고바람.
+
+
+java의 stream!
+JAVA에서 모든 I/O의 기본.
+스트림끼리 합체하여 더 편리한 스트림을 만들어 사용할 수 있다. 
+stream은 단방향!
+양방향 통신을 위해서는 두 개의 스트림이 필요하다. 
+
+스트림 사용 예제 프로그램을 작성해봤고, 
+JDBC와 스트림을 이용한 예제를 작성할 예정인 상황에서 수업 종료.
+
+
+

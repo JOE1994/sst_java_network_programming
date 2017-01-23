@@ -3,6 +3,8 @@ MultiProcessing
 MultiTasking
 MultiThreading
 
+JAVA는 언어적 차원에서 Thread를 지원해주기 때문에, 
+UNIX 계열의 POSIX 스레드를 사용할 때보다 훨씬 편리하다. 
 
 Thread 구현 방법 두 가지
 1. Thread 클래스 상속하는 클래스 만들기.
@@ -14,6 +16,8 @@ JVM 내부의 "Thread Scheduler"
 ->자바 스레드의 직접적인 실행 통제를 함
 
 Thread 제어
+
+스레드가 정확히 어느 시점에 시작되는지를 결정하지 못한다는 점이 단점이자 까다로운 점.
 
 start() 
 -> Thread Scheduler로 하여금 여유가 될 때 스레드를 실행해달라고 부탁.
